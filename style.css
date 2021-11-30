@@ -32,3 +32,9 @@ header {
 .separate-containers .site-main {
     margin: 0px !important;
 }
+
+.career {
+    display: grid;
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+}
