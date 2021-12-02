@@ -10,12 +10,19 @@ get_header(); ?>
   // query_posts(array('category_name' => 'positions', 'posts_per_page' => -1));
   $query = new WP_Query('cat=-!1');
 
+  if ($query->have_posts()) : ?>
+
+    <h2>Open Positions</h2>
+
+    <?php
+
+  endif;
+
   if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>
-      <div>
-        <h2><?php the_field('position_title'); ?></h2>
-        <div>
-          <?php the_field('position_details'); ?>
-        </div>
+      <div class="position">
+        <h2 class="position_title"><?php the_field('position_title'); ?></h2>
+        <?php the_field('position_details'); ?>
+        <img src="<?php the_field('position_img'); ?>" alt="<?php the_field('position_title'); ?>" />
       </div>
   <?php endwhile;
   endif; ?>

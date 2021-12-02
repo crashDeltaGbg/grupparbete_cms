@@ -40,3 +40,17 @@ header {
     max-width: 60%;
     width: 100%;
 }
+
+.position {
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.position_title {
+    color: indianred;
+    grid-column: 1 / -1;
+}
