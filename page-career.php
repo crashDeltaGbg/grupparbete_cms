@@ -22,7 +22,7 @@ get_header(); ?>
       <div class="position">
         <h2 class="position_title"><?php the_field('position_title'); ?></h2>
         <?php the_field('position_details'); ?>
-        <img src="<?php the_field('position_img'); ?>" alt="<?php the_field('position_title'); ?>" />
+        <img class="position_img" src="<?php the_field('position_img'); ?>" alt="<?php the_field('position_title'); ?>" />
       </div>
   <?php endwhile;
   endif; ?>

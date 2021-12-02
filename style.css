@@ -42,8 +42,8 @@ header {
 }
 
 .position {
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px gray;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem gray;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 1rem 0;
@@ -54,6 +54,11 @@ header {
 .position_title {
     color: indianred;
     grid-column: 1 / -1;
+}
+
+.position_img {
+    border-radius: 0.25rem;
+    min-width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
