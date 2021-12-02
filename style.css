@@ -36,8 +36,8 @@ header {
 .career {
     display: grid;
     grid-column: 1 / -1;
-    margin-top: 1rem;
-    max-width: 60%;
+    margin: 1rem 0;
+    max-width: 80%;
     width: 100%;
 }
 
@@ -46,6 +46,7 @@ header {
     box-shadow: 2px 2px 4px gray;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 1rem 0;
     overflow: hidden;
     padding: 1rem;
 }
@@ -53,4 +54,10 @@ header {
 .position_title {
     color: indianred;
     grid-column: 1 / -1;
+}
+
+@media only screen and (min-width: 768px) {
+    .career {
+        max-width: 60vw;
+    }
 }
