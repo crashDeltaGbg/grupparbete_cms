@@ -33,6 +33,10 @@ header {
     margin: 0px !important;
 }
 
+.My-footer {
+	background-color:black;
+}
+
 .career {
     display: grid;
     grid-column: 1 / -1;
