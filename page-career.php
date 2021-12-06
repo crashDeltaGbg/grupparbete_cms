@@ -7,7 +7,6 @@ get_header(); ?>
   <h1><?php the_title(); ?></h1>
   <?php the_content(); ?>
   <?php
-  // query_posts(array('category_name' => 'positions', 'posts_per_page' => -1));
   $query = new WP_Query('cat=-!1');
 
   if ($query->have_posts()) : ?>
