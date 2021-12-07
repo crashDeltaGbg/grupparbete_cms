@@ -1,12 +1,7 @@
 <?php
-get_header(); ?>
 
-
-
-<div class="career">
-  <h1><?php the_title(); ?></h1>
-  <?php the_content(); ?>
-  <?php
+function open_positions_func()
+{
   $query = new WP_Query('cat=-!1');
 
   if ($query->have_posts()) : ?>
@@ -23,7 +18,8 @@ get_header(); ?>
         <?php the_field('position_details'); ?>
         <img class="position_img" src="<?php the_field('position_img'); ?>" alt="<?php the_field('position_title'); ?>" />
       </div>
-  <?php endwhile;
-  endif; ?>
-
-</div>
+<?php endwhile;
+  endif;
+}
+add_shortcode('open_positions', 'open_positions_func');
+?>
